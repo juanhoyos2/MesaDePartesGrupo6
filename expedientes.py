@@ -10,7 +10,7 @@ def registrar_expediente(expedientes):
 
     dni = input("DNI: ").strip()
     nombre = input("Nombre del ciudadano: ").strip()
-    fecha = input("Fecha (DD/MM/AAAA): ").strip() 
+    fecha = input("Fecha (DD/MM/AAAA): ").strip()
     asunto = input("Asunto: ").strip()
     area = input("Area de destino: ").strip()
 
@@ -33,10 +33,10 @@ def registrar_expediente(expedientes):
         return
 
     numero = max(
-        [int(e["codigo"].split("-")[1]) for e in expedientes], 
-        default = 0
-    ) + 1   
-        #0001
+        [int(e["codigo"].split("-")[1]) for e in expedientes],
+        default=0
+    ) + 1
+
     expediente = {
         "codigo": f"EXP-{numero:04d}",
         "dni": dni,
